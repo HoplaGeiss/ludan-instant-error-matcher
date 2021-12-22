@@ -1,0 +1,9 @@
+<form [formGroup]="form" class="demo-form">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" [errorStateMatcher]="matcher" />
+    <mat-error *ngIf="nameControl.errors && nameControl.errors['pattern']">
+      Only small characters are allowed
+    </mat-error>
+  </mat-form-field>
+</form>
